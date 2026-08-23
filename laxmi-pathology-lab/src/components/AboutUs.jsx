@@ -22,7 +22,7 @@ const AboutUs = () => {
             </h2>
 
             <p className="mt-5 leading-7 text-gray-600">
-              Lakshmi Pathology Lab is a computerised pathology
+              Laxmi Pathology Lab is a computerised pathology
               laboratory committed to providing accurate, reliable
               and timely diagnostic testing services.
             </p>
@@ -113,7 +113,7 @@ const AboutUs = () => {
                   </div>
 
                   <h3 className="mt-5 text-2xl font-extrabold text-gray-900">
-                    Lakshmi Pathology Lab
+                    Laxmi Pathology Lab
                   </h3>
 
                   <p className="mt-2 text-sm font-medium text-red-600">

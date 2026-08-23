@@ -1,6 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const tests = [
+  {
+    name: "FEVER PANEEL",
+    description: "CBC, MP, WIDAL",
+    price: 400,
+  },
   {
     name: "CBC",
     description: "Complete Blood Count",
@@ -29,7 +35,7 @@ const tests = [
   {
     name: "Blood Group",
     description: "Blood Group Test",
-    price: 40,
+    price: 70,
   },
   {
     name: "TSH",
@@ -72,11 +78,6 @@ const tests = [
     price: 900,
   },
   {
-    name: "Blood Group",
-    description: "ABO & Rh Blood Group",
-    price: 70,
-  },
-  {
     name: "Hemoglobin",
     description: "Hemoglobin Test",
     price: 100,
@@ -95,7 +96,6 @@ const PopularTests = () => {
       className="bg-white px-4 py-14 sm:px-6 lg:px-8 lg:py-20"
     >
       <div className="mx-auto max-w-7xl">
-
         {/* Heading */}
         <div className="text-center">
           <p className="text-sm font-bold uppercase tracking-wider text-red-600">
@@ -107,14 +107,12 @@ const PopularTests = () => {
           </h2>
 
           <p className="mx-auto mt-3 max-w-2xl text-gray-600">
-            Choose from our laboratory tests with accurate and
-            reliable results.
+            Choose from our laboratory tests with accurate and reliable results.
           </p>
         </div>
 
         {/* Test Cards */}
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
           {visibleTests.map((test) => (
             <div
               key={test.name}
@@ -137,25 +135,23 @@ const PopularTests = () => {
 
               {/* Price + Button */}
               <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-5">
-
                 <div>
-                  <p className="text-xs text-gray-500">
-                    Test Price
-                  </p>
+                  <p className="text-xs text-gray-500">Test Price</p>
 
                   <p className="text-xl font-extrabold text-red-600">
                     ₹{test.price}
                   </p>
                 </div>
 
-                <button className="rounded-lg bg-red-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-red-700 active:scale-95">
+                <Link
+                  className="rounded-lg bg-red-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-red-700 active:scale-95"
+                  to="/book-test"
+                >
                   Book Test
-                </button>
-
+                </Link>
               </div>
             </div>
           ))}
-
         </div>
 
         {/* View All / Show Less */}
@@ -167,7 +163,6 @@ const PopularTests = () => {
             {showAll ? "Show Less" : "View All Tests"}
           </button>
         </div>
-
       </div>
     </section>
   );
