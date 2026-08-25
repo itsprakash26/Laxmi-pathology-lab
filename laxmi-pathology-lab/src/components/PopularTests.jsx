@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -87,15 +88,13 @@ const tests = [
 const PopularTests = () => {
   const [showAll, setShowAll] = useState(false);
 
-  // Initially only 8 tests
-  const visibleTests = showAll ? tests : tests.slice(0, 8);
-
   return (
     <section
       id="tests"
       className="bg-white px-4 py-14 sm:px-6 lg:px-8 lg:py-20"
     >
       <div className="mx-auto max-w-7xl">
+
         {/* Heading */}
         <div className="text-center">
           <p className="text-sm font-bold uppercase tracking-wider text-red-600">
@@ -113,10 +112,15 @@ const PopularTests = () => {
 
         {/* Test Cards */}
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {visibleTests.map((test) => (
+          {tests.map((test, index) => (
             <div
               key={test.name}
-              className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-red-200 hover:shadow-lg"
+              className={`
+                group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm
+                transition duration-300 hover:-translate-y-1 hover:border-red-200 hover:shadow-lg
+                ${!showAll && index >= 4 ? "hidden lg:block" : ""}
+                ${!showAll && index >= 8 ? "lg:hidden" : ""}
+              `}
             >
               {/* Icon */}
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-50 text-2xl">
@@ -136,7 +140,9 @@ const PopularTests = () => {
               {/* Price + Button */}
               <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-5">
                 <div>
-                  <p className="text-xs text-gray-500">Test Price</p>
+                  <p className="text-xs text-gray-500">
+                    Test Price
+                  </p>
 
                   <p className="text-xl font-extrabold text-red-600">
                     ₹{test.price}
@@ -163,9 +169,11 @@ const PopularTests = () => {
             {showAll ? "Show Less" : "View All Tests"}
           </button>
         </div>
+
       </div>
     </section>
   );
 };
 
 export default PopularTests;
+

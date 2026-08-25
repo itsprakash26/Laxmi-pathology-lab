@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
@@ -41,39 +42,48 @@ const Footer = () => {
           <ul className="mt-5 space-y-3 text-sm text-gray-400">
 
             <li>
-              <a
-                href="#"
+              <Link
+              to="/"
                 className="transition hover:text-red-400"
               >
                 Home
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#tests"
+              <Link
+                to="/#tests"
                 className="transition hover:text-red-400"
               >
                 Tests & Prices
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#about"
+              <Link
+                to="/#about"
                 className="transition hover:text-red-400"
               >
                 About Us
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#contact"
+              <Link
+                to="/#contact"
                 className="transition hover:text-red-400"
               >
                 Contact Us
-              </a>
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/#contact"
+                className="transition hover:text-red-400"
+              >
+                Contact Us
+              </Link >
             </li>
 
           </ul>
@@ -88,39 +98,39 @@ const Footer = () => {
           <ul className="mt-5 space-y-3 text-sm text-gray-400">
 
             <li>
-              <a
-                href="#tests"
+              <Link
+                to="/#tests"
                 className="transition hover:text-red-400"
               >
                 Blood Tests
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#home-collection"
+              <Link
+                to="/#home-collection"
                 className="transition hover:text-red-400"
               >
                 Home Sample Collection
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="/download-report"
+              <Link
+                to="/#online-report"
                 className="transition hover:text-red-400"
               >
                 Online Report
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="/book-test"
+              <Link
+                to="/#online-test-booking"
                 className="transition hover:text-red-400"
               >
                 Online Test Booking
-              </a>
+              </Link>
             </li>
 
           </ul>
