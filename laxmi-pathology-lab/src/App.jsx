@@ -9,7 +9,7 @@ import ScrollToHash from "./components/ScrollToHash";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Laxmi-pathology-lab">
       <ScrollToHash />
       <Routes>
         <Route element={<Layout />}>
