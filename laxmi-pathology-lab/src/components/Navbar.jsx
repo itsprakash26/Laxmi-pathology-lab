@@ -17,6 +17,10 @@ const Navbar = () => {
             src={logo}
             alt="Laxmi Pathology Lab"
             className="h-14 w-auto object-contain sm:h-16"
+            width="200"
+            height="64"
+            loading="eager"
+            fetchPriority="high"
           />
 
           {/* Desktop Info */}
@@ -67,10 +71,12 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <nav className="hidden md:block">
         <div className="mx-auto flex max-w-7xl items-center px-6 lg:px-8">
-
-          <Link 
-          className="bg-red-600 px-6 py-3 text-sm font-semibold text-white"
-          to="/">Home</Link>
+          <Link
+            className="bg-red-600 px-6 py-3 text-sm font-semibold text-white"
+            to="/"
+          >
+            Home
+          </Link>
 
           <Link
             className="px-6 py-3 text-sm font-medium text-gray-800 transition hover:text-red-600"
@@ -113,7 +119,7 @@ const Navbar = () => {
             className="px-6 py-3 text-sm font-medium text-gray-800 transition hover:text-red-600"
           >
             Contact
-          </Link  >
+          </Link>
         </div>
       </nav>
 

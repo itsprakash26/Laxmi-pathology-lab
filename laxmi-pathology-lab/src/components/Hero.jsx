@@ -4,38 +4,8 @@ import banner from "../assets/banner1.png";
 const Hero = () => {
   return (
     <section className="bg-gradient-to-br from-red-50 via-white to-blue-50">
-      {/* {remove} */}
-      <div className="w-full overflow-hidden whitespace-nowrap bg-white-50 py-2">
-        <div className="inline-block animate-marquee text-xl font-bold">
-          <span className="text-red-500">H</span>
-          <span className="text-orange-500">A</span>
-          <span className="text-yellow-400">P</span>
-          <span className="text-green-500">P</span>
-          <span className="text-cyan-400">Y</span>
-
-          <span className="mx-2 text-white"> </span>
-
-          <span className="text-blue-500">B</span>
-          <span className="text-purple-500">I</span>
-          <span className="text-pink-500">R</span>
-          <span className="text-red-400">T</span>
-          <span className="text-orange-400">H</span>
-          <span className="text-yellow-400">D</span>
-          <span className="text-green-400">A</span>
-          <span className="text-cyan-400">Y</span>
-
-          <span className="mx-2 text-white"> </span>
-
-          <span className="text-purple-400">B</span>
-          <span className="text-pink-400">H</span>
-          <span className="text-red-500">A</span>
-          <span className="text-orange-500">I</span>
-          <span>❤️</span>
-        </div>
-      </div>
-      {/* {remove} */}
       {/*i remove this and also update py-2 to py-12*/}
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-2 sm:px-6 sm:py-16 lg:grid-cols-2 lg:px-8 lg:py-15">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-2 lg:px-8 lg:py-15">
         {/* Left Content */}
         <div className="text-center lg:text-left">
           {/* Small Badge */}
@@ -123,6 +93,8 @@ const Hero = () => {
               src={banner}
               alt="Laxmi Pathology Lab"
               className="h-[280px] w-full rounded-2xl object-cover sm:h-[380px] lg:h-[480px]"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
 
